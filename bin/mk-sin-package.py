@@ -19,7 +19,9 @@ def sha1OfFile(filepath):
 current_dir = os.getcwd()
 build_json = os.path.join(current_dir, "build.json")
 license_file = os.path.join(current_dir, "license.txt")
+description_file = os.path.join(current_dir, "description.txt")
 folder_src = os.path.join(current_dir, "src")
+folder_dist = os.path.join(current_dir, "dist")
 work_dir = os.path.join(current_dir, "work")
 tar_gz_file = os.path.join(work_dir, "package.tar.gz")
 
@@ -30,6 +32,7 @@ if not os.path.exists(build_json):
 if not os.path.exists(folder_src):
     print("src folder not found!")
     sys.exit(2)
+    
 if os.path.exists(work_dir):
     shutil.rmtree(work_dir)
 
@@ -59,6 +62,16 @@ mjson["data"] = data
 mjson["checksum"] = checksum
 
 if os.path.exists(license_file):
-    mjson["license"] = base64.b64encode(open(license_file).read())
+    mjson["license"] = open(license_file).read().strip()
+    
+if os.path.exists(description_file):
+    mjson["description"] = open(description_file).read().strip()
 
-print json.dumps(mjson)
+
+if not os.path.exists(folder_dist):
+    os.makedirs(folder_dist)
+
+output_file = os.path.join(folder_dist, mjson["id"] + "-" + mjson["version"] + ".sin")
+
+with open(output_file, "w") as handle:
+    handle.write(json.dumps(mjson))

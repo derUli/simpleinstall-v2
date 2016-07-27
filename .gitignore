@@ -87,3 +87,7 @@ ENV/
 
 # Rope project settings
 .ropeproject
+
+# Output folders from mk-sin-package.py
+work/
+dist/
