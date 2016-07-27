@@ -67,7 +67,6 @@ if os.path.exists(license_file):
 if os.path.exists(description_file):
     mjson["description"] = open(description_file).read().strip()
 
-
 if not os.path.exists(folder_dist):
     os.makedirs(folder_dist)
 
