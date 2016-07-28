@@ -89,5 +89,7 @@ ENV/
 .ropeproject
 
 # Output folders from mk-sin-package.py
-work/
-dist/
+work
+dist
+
+*.tar.gz
