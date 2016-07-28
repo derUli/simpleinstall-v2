@@ -44,7 +44,7 @@ mjson = json.loads(json_data)
 os.chdir("src")
 pkgContent = []
 print("get content list of " + mjson["id"] + "...")
-for root, dirs, files in os.walk(folder_src):
+for root, dirs, files in os.walk("."):
     for filename in files:
         p = os.path.join(root, filename)
         p = p.replace(".\\", "")
