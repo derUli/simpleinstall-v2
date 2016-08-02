@@ -57,7 +57,7 @@ for f in pkgContent:
 os.chdir("..")
 tar.close()
 checksum = sha1OfFile(tar_gz_file)
-data = base64.b64encode(open(tar_gz_file).read())
+data = base64.b64encode(open(tar_gz_file, "rb").read())
 mjson["data"] = data
 mjson["checksum"] = checksum
 
