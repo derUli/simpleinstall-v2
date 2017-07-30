@@ -18,7 +18,7 @@ def sha1OfFile(filepath):
 
 current_dir = os.getcwd()
 build_json = os.path.join(current_dir, "build.json")
-license_file = os.path.join(current_dir, "license.txt")
+license_file = os.path.join(current_dir, "LICENSE")
 description_file = os.path.join(current_dir, "description.txt")
 folder_src = os.path.join(current_dir, "src")
 folder_dist = os.path.join(current_dir, "dist")
