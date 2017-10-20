@@ -7,8 +7,8 @@ import base64
 def usage():
     print("Usage:")
     print("sin2to1.py [filename]")
-    print()
-    print("Converts a SimpleInstall version 2 package to a SimpleInstall version 1 package")
+    print("")
+    print("Extracts archive data of a SimpleInstall v2 (*.sin) package")
     sys.exit()
 
 if len(sys.argv) < 2:
