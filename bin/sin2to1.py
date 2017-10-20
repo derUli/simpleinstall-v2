@@ -5,10 +5,10 @@ import os
 import base64
 
 def usage():
-    print("sin2to1.py - Converts a SimpleInstall version 2 package to a SimpleInstall version 1 package")
-    print("")
     print("Usage:")
     print("sin2to1.py [filename]")
+    print()
+    print("Converts a SimpleInstall version 2 package to a SimpleInstall version 1 package")
     sys.exit()
 
 if len(sys.argv) < 2:
