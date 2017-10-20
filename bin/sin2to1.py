@@ -17,3 +17,5 @@ if not os.path.exists(filename):
 
 with open(filename) as data_file:
     data = json.load(data_file)
+    data = data["data"]
+    print data
