@@ -1,9 +1,9 @@
 #!/bin/bash
 echo "Lines of php Code:"
-find . -name "*.php"|xargs cat|wc -l
+find . -name "*.php" -type f|xargs cat|wc -l
 echo "Lines of js Code:"
-find . -name "*.js"|xargs cat|wc -l
+find . -name "*.js" -type f|xargs cat|wc -l
 echo "Lines of css Code:"
-find . -name "*.css"|xargs cat|wc -l
+find . -name "*.css" -type f|xargs cat|wc -l
 echo "Lines of py Code:"
-find . -name "*.py"|xargs cat|wc -l
+find . -name "*.py" -type f|xargs cat|wc -l
