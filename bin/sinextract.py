@@ -48,7 +48,7 @@ with open(filename) as importFile:
     data = base64.b64decode(data)
     with open(outputFile, 'wb') as exportFile:
         exportFile.write(data)
-    extractTargetDir = os.path.join(os.path.dirname(filename), atrributes['id'])
+    extractTargetDir = os.path.join(os.path.dirname(filename), atrributes["id"] + '-' + atrributes["version"])
     if not os.path.exists(extractTargetDir):
         os.makedirs(extractTargetDir)
 
