@@ -6,6 +6,7 @@ import sys
 import json
 import base64
 import hashlib
+import time
 
 def make_tarfile(output_filename, source_dir):
     with tarfile.open(output_filename, "w:gz") as tar:
@@ -78,6 +79,8 @@ if os.path.exists(license_file):
     
 if os.path.exists(description_file):
     mjson["description"] = open(description_file).read().strip()
+
+mjson["build_date"] = int(time.time())
 
 if not os.path.exists(folder_dist):
     os.makedirs(folder_dist)
