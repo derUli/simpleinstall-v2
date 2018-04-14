@@ -73,7 +73,6 @@ if os.path.exists(screenshot1):
 elif os.path.exists(screenshot2):
     mjson["screenshot"] = "image/png;base64," + base64.b64encode(open(screenshot2, "rb").read())
 
-
 if os.path.exists(license_file):
     mjson["license"] = open(license_file).read().strip()
     

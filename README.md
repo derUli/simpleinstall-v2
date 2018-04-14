@@ -29,7 +29,7 @@ Add the path of the copied folder to your $PATH environment variable.
 
 [Set Path in Windows](https://www.computerhope.com/issues/ch000549.htm)
 
-On Unix-like systems such as macOS and Linux the change of %PATH depends on the operating system. Please refer your operating system documentation.
+On Unix-like systems such as macOS and Linux the change of %PATH depends on the operating system. Please refer your vendor's operating system documentation.
 
 You maybe have to reboot your computer to make the changes persistent.
 
@@ -47,3 +47,39 @@ The SimpleInstall v2 Packaging Tools contains these components
 Counts the lines of code by programming language in current folder
 
 **example** An example packaging project
+
+## Usage
+
+### Build a package
+
+mk-sin-package.py builds a package.
+It needs a folder `src` containing all files of the module or theme and a `build.json` file containing metadata.
+
+An example packaging project is located in the `example` folder.
+
+#### Screenshot
+
+A screenshot can be included.
+Just add an image as screenshot.jpg in the same folder as the `build.json` is located.
+
+#### License
+
+You can place a file `LICENSE` containing a license agreement in the same folder as the `build.json` is located.
+
+#### build.json attributes
+
+The following attributes are supported:
+
+**id** An unique identifier which is used as name for the package
+
+**version** Version number
+
+**description** A short description of the package
+
+**categories** Categories / Tags
+
+**dependencies** Modules which must be installed before the package can be installed
+
+**compatible_from** Minium required UliCMS version
+
+**compatible_to** Maximum required UliCMS version
