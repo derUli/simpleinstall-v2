@@ -93,3 +93,7 @@ work
 dist
 
 *.tar.gz
+
+.buildpath
+.project
+.settings
