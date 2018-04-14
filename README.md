@@ -55,6 +55,9 @@ Counts the lines of code by programming language in current folder
 mk-sin-package.py builds a package.
 It needs a folder `src` containing all files of the module or theme and a `build.json` file containing metadata.
 
+Please verify that only the required files are included.
+Don't include files other components in your `src` folder.
+
 An example packaging project is located in the `example` folder.
 
 To build a package you have to open a terminal `cd` to the folder which contains the `build.json` file and then run `mk-sin-package.py`.
