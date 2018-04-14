@@ -57,6 +57,9 @@ It needs a folder `src` containing all files of the module or theme and a `build
 
 An example packaging project is located in the `example` folder.
 
+To build a package you have to open a terminal `cd` to the folder which contains the `build.json` file and then run `mk-sin-package.py`.
+The package will be built in the `dist/` folder
+
 #### Screenshot
 
 A screenshot can be included.
