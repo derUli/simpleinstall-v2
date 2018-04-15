@@ -94,10 +94,42 @@ The following attributes are supported:
 
 `sin2to1.py` converts a SimpleInstall v2 (*.sin) package to a SimpleInstall v1 (*.tar.gz) package.
 
-** Example usage**
+**Example usage:**
 
 ```
 $ sin2to1.py my_package-1.0.sin$
 ```
 
-Results in a file my_package-1.0.tar.gz in the same folder. 
+Results in a file my_package-1.0.tar.gz in the same folder.
+
+### Extract data from a SimpleInstall v2 package
+
+Extracts the data from a SimpleInstall v2 package
+ 
+**Example usage:**
+
+```
+$ sinextract.py my_package-1.0.sin$
+```
+
+This commands results in a folder named `my_package-1.0` in the same folder.
+
+### Count lines of code
+
+The bash shell script `count-lines.sh` counts the lines of code by language in the current folder and it's subfolders.
+
+**Example output**
+
+```
+$ count-lines.sh
+Lines of php Code:
+169584
+Lines of js Code:
+103706
+Lines of css Code:
+66208
+Lines of py Code:
+0
+
+```
+ 
