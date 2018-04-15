@@ -56,7 +56,7 @@ mk-sin-package.py builds a package.
 It needs a folder `src` containing all files of the module or theme and a `build.json` file containing metadata.
 
 Please verify that only the required files are included.
-Don't include files other components in your `src` folder.
+Don't include files of other components in your `src` folder.
 
 An example packaging project is located in the `example` folder.
 
@@ -89,3 +89,15 @@ The following attributes are supported:
 **compatible_from** Minium required UliCMS version
 
 **compatible_to** Maximum required UliCMS version
+
+### Convert a SimpleInstall package
+
+`sin2to1.py` converts a SimpleInstall v2 (*.sin) package to a SimpleInstall v1 (*.tar.gz) package.
+
+** Example usage**
+
+```
+$ sin2to1.py my_package-1.0.sin$
+```
+
+Results in a file my_package-1.0.tar.gz in the same folder. 
