@@ -97,7 +97,7 @@ The following attributes are supported:
 **Example usage:**
 
 ```
-$ sin2to1.py my_package-1.0.sin$
+$ sin2to1.py my_package-1.0.sin
 ```
 
 Results in a file my_package-1.0.tar.gz in the same folder.
@@ -109,7 +109,7 @@ Extracts the data from a SimpleInstall v2 package
 **Example usage:**
 
 ```
-$ sinextract.py my_package-1.0.sin$
+$ sinextract.py my_package-1.0.sin
 ```
 
 This commands results in a folder named `my_package-1.0` in the same folder.
