@@ -59,7 +59,7 @@ os.chdir("..")
 tar.close()
 checksum = sha1OfFile(tar_gz_file)
 data = base64.b64encode(open(tar_gz_file, "rb").read())
-mjson["data"] = data
+mjson["data"] = data.decode('utf-8')
 mjson["checksum"] = checksum
 
 if os.path.exists(license_file):
@@ -69,9 +69,11 @@ screenshot1 = os.path.join(current_dir, "screenshot.jpg")
 screenshot2 = os.path.join(current_dir, "screenshot.png")
 
 if os.path.exists(screenshot1):
-    mjson["screenshot"] = "image/jpeg;base64," + base64.b64encode(open(screenshot1, "rb").read())
+	base_uri = b"image/jpeg;base64," + base64.b64encode(open(screenshot1, "rb").read())
+	mjson["screenshot"] = base_uri.decode('utf-8')
 elif os.path.exists(screenshot2):
-    mjson["screenshot"] = "image/png;base64," + base64.b64encode(open(screenshot2, "rb").read())
+	base_uri = b"image/png;base64," + base64.b64encode(open(screenshot1, "rb").read())
+	mjson["screenshot"] = base_uri.decode('utf-8')
 
 if os.path.exists(license_file):
     mjson["license"] = open(license_file).read().strip()
