@@ -40,7 +40,7 @@ if os.path.exists(work_dir):
 if not os.path.exists(work_dir):
     os.makedirs(work_dir)
 
-json_data = open(build_json).read()
+json_data = open(build_json, encoding="utf8").read()
 mjson = json.loads(json_data)
 os.chdir("src")
 pkgContent = []
