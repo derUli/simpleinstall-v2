@@ -43,7 +43,7 @@ if (containsModule(null, "blog")) {
                 $title = $row["title"];
                 $seo_shortname = $row["seo_shortname"];
                 
-                $link = rootDirectory() . get_requested_pagename() . ".html?single=" . $seo_shortname;
+                $link = rootDirectory() . get_slug() . ".html?single=" . $seo_shortname;
                 
                 $post = $title . " " . $link;
                 
