@@ -63,7 +63,7 @@ mjson["data"] = data.decode('utf-8')
 mjson["checksum"] = checksum
 
 if os.path.exists(license_file):
-    mjson["license"] = open(license_file).read().strip()
+    mjson["license"] = open(license_file, "rb").read().strip()
 
 screenshot1 = os.path.join(current_dir, "screenshot.jpg")
 screenshot2 = os.path.join(current_dir, "screenshot.png")
@@ -89,4 +89,4 @@ if not os.path.exists(folder_dist):
 output_file = os.path.join(folder_dist, mjson["id"] + "-" + mjson["version"] + ".sin")
 
 with open(output_file, "w") as handle:
-    handle.write(json.dumps(mjson))
+    handle.write(json.dumps(mjson, ensure_ascii = False))
