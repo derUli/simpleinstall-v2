@@ -4,12 +4,14 @@ import json
 import os
 import base64
 
+
 def usage():
     print("Usage:")
     print("sin2to1.py [filename]")
     print("")
     print("Extracts archive data of a SimpleInstall v2 (*.sin) package")
     sys.exit()
+
 
 if len(sys.argv) < 2:
     usage()
@@ -25,5 +27,5 @@ with open(filename) as importFile:
     data = json.load(importFile)
     data = data["data"]
     data = base64.b64decode(data)
-    with open(outputFile, 'wb') as exportFile:
+    with open(outputFile, "wb") as exportFile:
         exportFile.write(data)
